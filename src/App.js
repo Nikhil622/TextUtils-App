@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import React,{useState} from 'react'
+import Textform from './Components/Textform';
+import Footer from './Components/Footer';
 
 function App() {
+   const [mode, setMode] = useState('Dark');
+   const toggleMode=()=>{
+       if(mode==='Dark')
+         setMode('Light');
+       else 
+         setMode('Dark');
+        console.log('Clicked for background change');
+      document.body.style.backgroundColor=(mode==='Dark'?'#070F46':'white');
+   }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+       <Navbar mode={mode} changeMode={toggleMode}/>;
+       <Textform mode={mode}/>
+       <Footer/>
+    </>
   );
 }
 
