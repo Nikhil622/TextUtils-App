@@ -47,7 +47,7 @@ export default function Textform(props) {
     <>
         <div class="mb-3 container">
             <label for="exampleFormControlTextarea1" class="form-label" style={{color:'white'}}>Enter text to analyze</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value={text} onChange={changeText} style={{backgroundColor:props.mode==='Dark'?'white':'grey'}}></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value={text} onChange={changeText} style={{backgroundColor:props.mode==='Dark'?'white':'#00004d',color:props.mode==='Dark'?'black':'white'}}></textarea>
             <button className="btn btn-primary mx-1 my-2" onClick={handleUpperCase}>Convert To UpperCase</button>
             <button className="btn btn-primary mx-1 my-2" onClick={handleLowerCase}>Convert To LowerCase</button>
             <button className="btn btn-primary mx-1 my-2" onClick={removeExtraSpace}>Remove Extra Spaces</button>
