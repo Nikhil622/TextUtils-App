@@ -4,7 +4,7 @@ export default function Textform(props) {
     const [text, setText] = useState('');
     function changeText(e)
      {
-         setText(e.target.value);
+        setText(e.target.value);
      }
     function handleUpperCase()
     {
